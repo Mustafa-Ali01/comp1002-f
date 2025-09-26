@@ -13,7 +13,7 @@
 		<main>
             <h2>Edit Account Information and Settings</h2>
             <!-- STEP 1: After first uploading all of these lesson files to your Web server, set the action attribute for the form (process-form.php), then go to the bottom of the form for the next step -->
-            <form id="edit_payment_info" action="" method="get">
+            <form id="edit_payment_info" action="process-form.php" method="get">
                 <!-- Note the hidden form element below - these can be used to other useful name/value pairs to the server -->
                 <input type="hidden" name="form_sent" value="1" />
 
@@ -21,11 +21,13 @@
                 Contact Information
                     <!-- STEP 3: Build an input element for First Name and Last Name - include type, name, id, required, size, maxlength, and placeholder attributes -->
                     <div>
-                        
+                        <label for="fname">First Name</label>
+                        <input type="text" name="fname" id="fname"/>
                          
                     </div>
                     <div>
-                        
+                        <label for="lname">Last Name</label>
+                        <input type="text" name="lname" id="lname"/>                        
                          
                     </div>
                     <!-- STEP 4: Add label elements for each of the above input elements -->
@@ -35,17 +37,36 @@
                     </div>
                     <!-- STEP 5: Add a select element and label for choosing the province -->
                     <div>
-                        
+                        <label for="prov">Province</label>
+                        <select name="prov" id="prov">
+                            <optgroup label="Province">
+                                <option value="AB">Alberta</option>
+                                <option value="BC">Brritish Columbia</option>
+                                <option value="MB">Manitoba</option>
+                                <option value="NB">New Brunswick</option>
+                                <option value="NF">Newfoundland</option>
+                                <option value="NS">Nova Scotia</option>
+                                <option value="ON">Ontario</option>
+                                <option value="PE">Prince Edward Island</option>
+                                <option value="PQ">Quebec</option>
+                                <option value="SK">Saskatchewan</option>
+                            </optgroup>
+                            <optgroup label="Terratories">
+                                <option value="NV">Nunavut</option>
+                                <option value="NT">Northwest Territories</option>
+                                <option value="YK">Yukon</option>
+                            </optgroup>
+                        </select>
                     </div>
                     <!-- STEP 6: Add an input element for phone number (type="tel") -->
                     <div>
                         <label for="phone">Phone</label>
-                        <input id="phone" type="" name="phone" />
+                        <input id="phone" type="tel" name="phone" />
                     </div>
                     <!-- STEP 7: Include an input element and label for email (type="email"), then head to the top of the HTML to add CSS to make the form look better -->
                     <div>
                         <label for="email">Email</label>
-                        <input id="email" type="" name="email" />                        
+                        <input id="email" type="email" name="email" />                        
                     </div>
                 
                 <fieldset>
@@ -89,7 +110,7 @@
                     <!-- STEP 15: Upload this HTML file to your server, and browse to it to verify that all changes have been applied, then proceed to process-form.php for the next step -->
                 </fieldset>
                 <!-- STEP 2: Add buttons or input elements to function as the reset and submit buttons -->
-                
+                <button type="reset">Reset</button><button type="submit">Submit</button>
             </form>
         </main>
         <footer>
