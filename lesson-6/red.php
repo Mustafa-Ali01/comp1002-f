@@ -2,49 +2,94 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Red Blocks | COMP1002 HTML, CSS, and JS Fundamentals</title>
-		<meta name="author" content="The name of the document’s author to go here">
+		<title>Home | COMP1002 HTML, CSS, and JS Fundamentals</title>
+		<meta name="author" content="The name of the document’s author to go here" />
 		<meta name="description" content="A concise and accurate summary of the document content is to appear here">
 		<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 		<link rel="stylesheet" href="css/styles.css" />
 	</head>
-	<body id="section2">
+	<body>
 		<!-- Page-level header -->
 		<header>
-			<img src="images/html-logo.svg" height="75" width="75" alt="HTML" />
+ 			<img src="images/html-logo.svg" height="75" width="75" alt="HTML" />
 			<h1>HTML, CSS, and JS Fundamentals</h1>
 			<h2>Building Blocks for Web Developers</h2>
-			<!-- Global site navigation -->
-			<nav>
-				<ul>
-<!-- STEP 5a: We are now marooned on this page with no way back to the home page except the 'Back' button - build an LI and an A element above pointing back to the index.php page -->
-					<li><a href="index.php">Home</a></li>
-					<li><a href="red.php">Red blocks</a></li>
-					<li><a href="blue.php">Blue blocks</a></li>
-					<li><a href="yellow.php">Yellow blocks</a></li>
-<!-- STEP 5b: Upload this changed file, and try it in the browser - then go back to index.php for STEP 6 -->
-				</ul>
-			</nav>
+<!-- STEP 3: Build a NAV element for global Web site navigation -->
+<?php
+	// Get the global navigation HTML
+	include("includes/nav.php");
+?>
+<!-- STEP 4a: Let's build a list of hyperlinks inside the above NAV element linking this page to other pages in the site - create an unordered list element (UL) -->
+<!-- STEP 4b: Create a list item inside the UL (LI) -->
+<!-- STEP 4c: Insert an A element inside the LI, and add an href that points to the HTML page 'red.php' - include also some text for the hyperlink -->
+<!-- STEP 4d: Add an appropriate title attribute value for the A element, upload the changed page and try it out in a browser - proceed next to open up red.php in your code editor for STEP 5 -->
+<!-- STEP 6: Build a link on this page to index.php (it might seem silly), so that the navigation is consistent from page-to-page - this is very important when building global navigation for Web apps from a usability perspective -->
+<!-- STEP 7: Include navigation links for the pages blue.php and yellow.php - make sure all NAV elements on all pages are the same - upload your files and test your work -->
 		</header>
 		<!-- Page-level main content -->
 		<main>
+			<!-- News Section -->
 			<section>
-				<h3>Red Blocks</h3>
-				<p>Viverra orci sagittis eu volutpat odio facilisis mauris sit amet. Lacus laoreet non curabitur gravida arcu ac tortor dignissim convallis. Ut enim blandit volutpat maecenas. Mauris commodo quis imperdiet massa. Sit amet dictum sit amet justo donec enim diam vulputate. Imperdiet nulla malesuada pellentesque elit.</p>
-				<p>Et malesuada fames ac turpis egestas integer eget aliquet nibh. Commodo quis imperdiet massa tincidunt nunc pulvinar. Odio pellentesque diam volutpat commodo sed. Enim eu turpis egestas pretium aenean. Faucibus purus in massa tempor nec. Duis tristique sollicitudin nibh sit amet. Tortor condimentum lacinia quis vel eros donec ac.</p>
+				<h3>Building Blocks In The News</h3>
+				<!-- First Article -->
+				<article>
+					<h4>Latest Research Reveals Building Blocks are Cool</h4>
+					<p>by Blocky Blockhead<br /><time datetime="2018-03-29">March 29, 2018</time></p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur adipiscing. Platea dictumst vestibulum rhoncus est pellentesque. Read more…</p>
+				</article>
+				<!-- Second Article -->
+				<article>
+					<h4>Building Blocks Aren’t Just For Kids</h4>
+					<p>by Rectangle Square<br /><time datetime="2017-06-17">June 17, 2017</time></p>
+					<p>Amet risus nullam eget felis eget nunc lobortis. Eget arcu dictum varius duis at consectetur lorem donec. Arcu felis bibendum ut tristique et egestas quis. Turpis tincidunt id aliquet risus feugiat in ante metus. Read more…</p>
+				</article>
+				<!-- Third Article -->
+				<article>
+					<h4>Investors Bet Big on Building Block Products</h4>
+					<p>by Right Angle<br /><time datetime="2018-02-15">February 15, 2018</time></p>
+					<p>At imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Arcu cursus euismod quis viverra nibh cras. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Aenean sed adipiscing diam donec adipiscing. Read more…</p>
+				</article>
 			</section>
+			<!-- Side Notes / Related Information -->
 			<aside>
+				<!-- Newsletter Subscribe Form -->
+				<h3>Subscribe to Newsletter</h3>
+				<form action="subscribe.php" method="get">
+					<label for="emailAddress">Email</label>
+					<input type="email" name="emailAddress" id="emailAddress" required />
+					<button type="submit">Subscribe</button>
+				</form>
 				<figure>
-					<img src="images/red-block.png" width="350" height="237" alt="Red block" />
-					<figcaption><a href="https://openclipart.org/detail/224274/clip-is-a-brick-2x4" title="View the original artwork" rel="external">Brick</a> by Vanja (Public Domain)</figcaption>
+					<img src="images/mini-figure.png" width="176" height="285" alt="Mini figure">
+<!-- STEP 1a: Build an A (anchor) element that surrounds the word 'LEGO®' inside the FIGCAPTION below -->
+					<figcaption><a href="https://www.lego.com/" rel="external" title="Go to the official Lego Web site">LEGO®</a> mini figure by Vanja (Public Domain)</figcaption>
+					<!-- Mini figure by Vanja (Public Domain) https://openclipart.org/detail/224315/clip-is-a-brick-minifig-4 -->
+<!-- STEP 1b: Add an href attribute with the value set to the URL, "https://www.lego.com/" - this is an absolute URL -->
+<!-- STEP 1c: Since the link is pointing to somewhere other than this Web site, it is an external URL - as such, add rel="external" to the above A element start tag -->
+<!-- STEP 1d: To add additional accessibility, add a useful title attribute as well with a short phrase describing the purpose of the hyperlink -->
+<!-- STEP 2a: Upload this entire folder of files to a Web server and browse to the page in a browser -->
+<!-- STEP 2b: How does the hyperlink text appear differently than the rest of the page? Click on the link, then click on the 'Back' button on your browser - how does the same link appear now? -->
+<!-- STEP 2c: Look at your browsing history for this particular link - then clear your history and reload the page - notice how the link is restored - this is wayfinding -->
 				</figure>
+				<h3>Did You Know…?</h3>
+				<p>One of the most important components of effective life-long learning is <em>play</em>. Learning a new skill (like Web development) should include a certain amount of play. Renowned children’s programming entertainer Mr. Rogers certainly knew about the value that play represented:</p>
+				<!-- Quotation -->
+				<blockquote cite="https://www.brainyquote.com/quotes/fred_rogers_193081">
+					<p>Play is often talked about as if it were a relief from serious learning. But for children, play <em>is</em> serious learning. Play is really the work of childhood. –Fred Rogers</p>
+				</blockquote>
+				<p>Take a little time every day to just <strong>play</strong> with technology – you’ll be surprised how much you learn.</p>
 			</aside>
 		</main>
 		<!-- Page-level footer -->
 		<footer>
+<!-- STEP 8a: Create a NAV element in the FOOTER for the legal stuff -->
 			<nav>
-				<a href="about/privacy-policy.php" title="Read our Privacy Policy">Privacy Policy</a> | <a href="about/privacy-policy.php#personal-information" title="Learn about how we treat your personal information">Use of Personal Information</a>
+				<a href="about/privacy-policy.php">Privacy Policy</a>
+				<a href="about/privacy-policy.php#personal-information">Use of Personal Information</a>
 			</nav>
+<!-- STEP 8b: Build a link to the page 'Privacy Policy' - note that the href will need to be a relative path that points from this page, down into the 'about' folder -->
+<!-- STEP 8c: Construct a second link that takes the visitor to the element with the id="personal-information" on the very same page, by appending the id value to the URL with a hash symbol (#personal-information) - this is called page-level navigation -->
+<!-- STEP 8d: Try it in your browser, then proceed to about/privacy-policy.php in your code editor for the next step -->
 			<p><small>© HTML, CSS, and JS Blocks Inc.</small></p>
 		</footer>
 	</body>
