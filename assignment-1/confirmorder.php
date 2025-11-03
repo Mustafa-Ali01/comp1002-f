@@ -26,8 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $instructions = ($_POST['instructions'] ?? 'None');
 
     // Toppings are an array, so we handle them separately
-    $toppings = $_POST['toppings'] ?? []; 
-    $toppings_list = 'None';
+    //$toppings = $_POST['toppings'] ?? []; 
+    //$toppings_list = 'None';
     $toppings_list = ($_POST['toppings'] ?? 'None');
     
     // Start displaying the order details
@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "<li>Number of Pizzas: $num_pizzas</li>";
     echo "<li>Size and Shape: $pizza_size, " . ($_POST['pizza_shape'] ?? 'N/A') . "</li>";
     echo "<li>Crust Type: $crust_type</li>";
-    echo "<li>Selected Toppings: $toppings</li>";
+    echo "<li>Selected Toppings: $toppings_list</li>";
     echo "</ul>";
 
     echo "<h4>Contact & Service:</h4>";
