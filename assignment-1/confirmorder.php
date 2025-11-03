@@ -26,9 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $instructions = ($_POST['instructions'] ?? 'None');
 
     // Toppings are an array, so we handle them separately
-    //$toppings = $_POST['toppings'] ?? []; 
+    $toppings = $_POST['toppings'] ?? []; 
     //$toppings_list = 'None';
-    $toppings_list = ($_POST['toppings'] ?? 'None');
+    //$toppings_list = ($_POST['toppings'] ?? 'None');
     
     // Start displaying the order details
     echo "<h3>Thank you for your order, $customer_name!</h3>";
