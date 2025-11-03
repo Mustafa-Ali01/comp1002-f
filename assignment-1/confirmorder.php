@@ -27,12 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Toppings are an array, so we handle them separately
     $toppings = $_POST['toppings'] ?? []; 
-    $toppings_list = 'None';
-    if (!empty($toppings)) {
-        // Sanitize each item and join them into a string
-        $sanitized_toppings = array_map('', $toppings);
-        $toppings_list = implode(', ', $sanitized_toppings);
-    }
+
     
     // Start displaying the order details
     echo "<h3>Thank you for your order, $customer_name!</h3>";
