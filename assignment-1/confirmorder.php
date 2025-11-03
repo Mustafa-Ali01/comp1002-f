@@ -35,20 +35,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     
     // Start displaying the order details
-    echo "<h3>Thank you for your order, **$customer_name**!</h3>";
+    echo "<h3>Thank you for your order, $customer_name!</h3>";
     echo "<h4>Your Order Details:</h4>";
     
     echo "<ul>";
-    echo "<li>**Number of Pizzas:** $num_pizzas</li>";
-    echo "<li>**Size and Shape:** $pizza_size, " . ($_POST['pizza_shape'] ?? 'N/A') . "</li>";
-    echo "<li>**Crust Type:** $crust_type</li>";
-    echo "<li>**Selected Toppings:** $toppings_list</li>";
+    echo "<li>Number of Pizzas: $num_pizzas</li>";
+    echo "<li>Size and Shape: $pizza_size, " . ($_POST['pizza_shape'] ?? 'N/A') . "</li>";
+    echo "<li>Crust Type: $crust_type</li>";
+    echo "<li>Selected Toppings: $toppings_list</li>";
     echo "</ul>";
 
     echo "<h4>Contact & Service:</h4>";
     echo "<ul>";
-    echo "<li>**Service Type:** $service_type</li>";
-	echo "<li>**Special Instructions/Address:** <br>" . ($instructions) . "</li>";
+    echo "<li>Service Type: $service_type</li>";
+	echo "<li>Special Instructions/Address: <br>" . ($instructions) . "</li>";
     echo "</ul>";
 
 } 
