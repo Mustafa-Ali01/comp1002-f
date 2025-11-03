@@ -27,11 +27,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Toppings are an array, so we handle them separately
     $toppings_list = $_POST['toppings'] ?? []; 
-    $toppings = ""
+    $toppings = "";
     foreach ($toppings_list as $x) {
-        $toppings = "$toppings $x,"
+        $toppings = "$toppings $x,";
     }
-    $toppings = substr($toppings, 0, -1)
+    $toppings = substr($toppings, 0, -1);
     echo "<h3>Thank you for your order, $customer_name!</h3>";
     echo "<h4>Your Order Details:</h4>";
     
