@@ -66,7 +66,7 @@ main p {
 main p {
 	text-align: justify;
 }
-/* STEP 7: Modify bold and italics, by applying to strong and em - swap them around */
+/* STEP 7: Modiy bold and italics, by applying to strong and em - swap them around */
 em {
 	font-style: oblique;
 	font-weight: bold;
